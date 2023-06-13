@@ -16,6 +16,12 @@
     "noEmit": true,
     "jsx": "react-jsx"
   },
-  "include": ["src", "commitlint.config.ts", "src/**/*.ts", "src/**/*.tsx"],
+  "include": [
+    "src/**/*",
+    "commitlint.config.ts",
+    "src/**/*.ts",
+    "src/**/*.tsx",
+    "src/**/*.{ts,tsx}"
+  ],
   "exclude": ["node_modules", "dist"]
 }
