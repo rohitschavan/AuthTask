@@ -1,4 +1,4 @@
-import type { UserConfig } from '@commitlint/types';
+import type { UserConfig } from '@commitlint/types'
 // build: Changes that affect the build system or external dependencies (example scopes: gulp, broccoli, npm)
 // ci: Changes to our CI configuration files and scripts (example scopes: Travis, Circle, BrowserStack, SauceLabs)
 // docs: Documentation only changes
@@ -48,6 +48,6 @@ const Configuration: UserConfig = {
       ],
     ],
   },
-};
+}
 
-module.exports = Configuration;
+module.exports = Configuration
