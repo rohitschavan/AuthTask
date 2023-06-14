@@ -5,10 +5,15 @@ import { Button } from '@mantine/core'
 const meta: Meta<typeof Button> = {
   title: 'Atoms/Button',
   component: Button,
-  argTypes:{
-    variant:{
-      options:['primary','secondary']
-    }
+  argTypes: {
+    variant: {
+      options: ['primary', 'secondary', 'delivered', 'shipped', 'notDelivered'],
+      control: { type: 'select' },
+    },
+    radius: {
+      options: ['xs', 'sm', 'md', 'lg', 'xl'],
+      control: { type: 'select' },
+    },
   },
   tags: ['autodocs'],
 }
