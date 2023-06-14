@@ -16,7 +16,6 @@ const buttonVariants: Record<
   primary: (theme) => ({
     root: {
       backgroundColor: theme.colors.gray[9],
-      borderRadius: theme.radius.xs,
       color: theme.colors.gray[0],
       height: rem(35),
     },
@@ -24,7 +23,6 @@ const buttonVariants: Record<
   secondary: (theme) => ({
     root: {
       backgroundColor: theme.colors.gray[4],
-      borderRadius: theme.radius.xs,
       color: theme.colors.gray[0],
       height: rem(35),
     },
@@ -32,7 +30,6 @@ const buttonVariants: Record<
   delivered: (theme) => ({
     root: {
       backgroundColor: theme.colors.green[6],
-      borderRadius: theme.radius.xs,
       color: theme.colors.gray[0],
       height: rem(35),
     },
@@ -40,7 +37,6 @@ const buttonVariants: Record<
   shipped: (theme) => ({
     root: {
       backgroundColor: theme.colors.blue[3],
-      borderRadius: theme.radius.xs,
       color: theme.colors.gray[0],
       height: rem(35),
     },
@@ -48,7 +44,6 @@ const buttonVariants: Record<
   notDelivered: (theme) => ({
     root: {
       backgroundColor: theme.colors.red[3],
-      borderRadius: theme.radius.xs,
       color: theme.colors.gray[0],
       height: rem(35),
     },
