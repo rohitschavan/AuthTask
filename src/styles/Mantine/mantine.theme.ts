@@ -40,7 +40,7 @@ export const theme: MantineThemeOverride = {
           padding: '6px 12px',
           borderRadius: theme.radius.xs,
           fontSize: theme.fontSizes.sm,
-          height: '36px',
+          height: rem(36),
         },
       }),
     },
