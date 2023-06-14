@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React from 'react'
 import { Badge } from '@mantine/core'
 import { ReactComponent as MoneyIcon } from '../../../assets/icons/money.svg'
 import { ReactComponent as PreparingIcon } from '../../../assets/icons/preparing.svg'
