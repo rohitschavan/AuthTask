@@ -1,5 +1,5 @@
 import React from 'react'
-import './App.css'
+import './App.scss'
 import { Button, MantineProvider, Text } from '@mantine/core'
 import { theme } from '../styles/Mantine/mantine.theme'
 import CustomFonts from '../styles/Mantine/CustomFonts/CustomFonts'
