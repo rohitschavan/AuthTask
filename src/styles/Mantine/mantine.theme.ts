@@ -27,9 +27,9 @@ export const theme: MantineThemeOverride = {
     xxl: rem(64),
   },
   components: {
-    Button: {
-      variants: buttonVariants,
-    },
+    // Button: {
+    //   variants: buttonVariants,
+    // },
     Input: {
       variants: {},
     },

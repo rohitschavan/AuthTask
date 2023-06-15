@@ -1,6 +1,6 @@
 import type { Meta, StoryObj } from '@storybook/react'
 
-import { Button } from '@mantine/core'
+import Button from './Button'
 
 const meta: Meta<typeof Button> = {
   title: 'Atoms/Button',
@@ -8,10 +8,6 @@ const meta: Meta<typeof Button> = {
   argTypes: {
     variant: {
       options: ['primary', 'secondary', 'delivered', 'shipped', 'notDelivered'],
-      control: { type: 'select' },
-    },
-    radius: {
-      options: ['xs', 'sm', 'md', 'lg', 'xl'],
       control: { type: 'select' },
     },
   },
