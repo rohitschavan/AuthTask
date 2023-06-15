@@ -4,12 +4,17 @@ import { Preview } from '@storybook/react'
 
 import { MantineProvider } from '@mantine/core'
 import { theme } from '../src/styles/Mantine/mantine.theme'
+// import '../src/index.scss'
 
 const preview = {
   decorators: [
     (Story) => (
-      <MantineProvider theme={theme}>
-        {/* 👇 Decorators in Storybook also accept a function. Replace <Story/> with Story() to enable it  */}
+      <MantineProvider
+        withCSSVariables
+        withGlobalStyles
+        withNormalizeCSS
+        theme={theme}
+      >
         <Story />
       </MantineProvider>
     ),
