@@ -1,7 +1,6 @@
 import { MantineThemeOverride, rem } from '@mantine/core'
 import MantineColors from './colors'
 import buttonVariants from './button'
-import textProperties from './text'
 
 export const theme: MantineThemeOverride = {
   focusRing: 'never',
@@ -35,7 +34,6 @@ export const theme: MantineThemeOverride = {
     Input: {
       variants: {},
     },
-    Text: textProperties,
     Title: {
       styles: (theme) => ({
         root: {

@@ -1,6 +1,6 @@
 import type { Meta, StoryObj } from '@storybook/react'
 
-import { Text } from '@mantine/core'
+import Text from './Text'
 
 const meta: Meta<typeof Text> = {
   title: 'Atoms/Text',
@@ -9,6 +9,13 @@ const meta: Meta<typeof Text> = {
     size: {
       options: ['xxs', 'xs', 'sm', 'md', 'lg', 'xl', 'xxl'],
       control: { type: 'select' },
+    },
+    fw: {
+      options: [100, 500, 700],
+      control: { type: 'select' },
+    },
+    color: {
+      control: { type: 'color' },
     },
   },
   tags: ['autodocs'],
