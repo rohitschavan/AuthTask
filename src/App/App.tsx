@@ -6,7 +6,12 @@ import CustomFonts from '../styles/Mantine/CustomFonts/CustomFonts'
 
 const App = () => {
   return (
-    <MantineProvider theme={theme}>
+    <MantineProvider
+      withCSSVariables
+      withGlobalStyles
+      withNormalizeCSS
+      theme={theme}
+    >
       <CustomFonts />
       <div className="App">
         <header className="App-header">
