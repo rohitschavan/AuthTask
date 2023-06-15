@@ -34,16 +34,6 @@ export const theme: MantineThemeOverride = {
       variants: {},
     },
     Text: {},
-    Badge: {
-      styles: (theme) => ({
-        root: {
-          padding: '6px 12px',
-          borderRadius: theme.radius.xs,
-          fontSize: theme.fontSizes.sm,
-          height: rem(36),
-        },
-      }),
-    },
   },
   radius: {
     xs: rem(6),

@@ -6,6 +6,7 @@ import { ReactComponent as TransitIcon } from '../../../assets/icons/shipped.svg
 import { ReactComponent as DevliveredIcon } from '../../../assets/icons/delivered.svg'
 import { ReactComponent as CancelledIcon } from '../../../assets/icons/cancelled.svg'
 import { ReactComponent as NotDeliveredIcon } from '../../../assets/icons/notDelivered.svg'
+import './Status.scss'
 
 interface StatusProps {
   variant?:
@@ -19,7 +20,7 @@ interface StatusProps {
   children: React.ReactNode
 }
 
-const Status: React.FC<StatusProps> = ({ variant = 'default', children }) => {
+const Status = ({ variant = 'default', children }: StatusProps) => {
   const svg = (variant: string) => {
     switch (variant) {
       case 'awaitingPayment':
@@ -39,31 +40,8 @@ const Status: React.FC<StatusProps> = ({ variant = 'default', children }) => {
     }
   }
 
-  const getColor = (variant: string) => {
-    switch (variant) {
-      case 'awaitingPayment':
-        return 'orange.5'
-      case 'preparingtoShip':
-        return 'purple.4'
-      case 'inTransit':
-        return 'blue.3'
-      case 'delivered':
-        return 'green.6'
-      case 'cancelled':
-        return 'gray.5'
-      case 'notDelivered':
-        return 'red.3'
-      case 'default':
-        return 'gray.9'
-    }
-  }
-
   return (
-    <Badge
-      leftSection={svg(variant)}
-      color={getColor(variant)}
-      variant="filled"
-    >
+    <Badge leftSection={svg(variant)} variant="filled" className={variant}>
       {children}
     </Badge>
   )
