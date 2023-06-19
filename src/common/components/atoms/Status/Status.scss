@@ -1,0 +1,37 @@
+.mantine-Badge-root {
+  padding: 6px 12px;
+  border-radius: var(--mantine-radius-xs);
+  font-size: var(--mantine-font-size-sm);
+  height: 36px;
+  .mantine-Badge-leftSection {
+    margin: 0px 5px -3px -3px;
+  }
+}
+
+// variants
+.awaitingPayment {
+  background-color: var(--mantine-color-orange-5);
+}
+
+.preparingtoShip {
+  background-color: var(--mantine-color-purple-4);
+}
+
+.inTransit {
+  background-color: var(--mantine-color-blue-3);
+}
+
+.delivered {
+  background-color: var(--mantine-color-green-6);
+}
+
+.cancelled {
+  background-color: var(--mantine-color-gray-5);
+}
+.notDelivered {
+  background-color: var(--mantine-color-red-3);
+}
+
+.default {
+  background-color: var(--mantine-color-gray-9);
+}

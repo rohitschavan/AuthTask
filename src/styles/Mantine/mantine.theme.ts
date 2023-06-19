@@ -9,11 +9,12 @@ export const theme: MantineThemeOverride = {
     fontFamily: 'Lato-Light',
     fontWeight: 700,
     sizes: {
-      h1: {},
-      h2: {},
-      h3: {},
-      h5: {},
-      h6: {},
+      h1: { fontSize: rem(64) },
+      h2: { fontSize: rem(48) },
+      h3: { fontSize: rem(24) },
+      h4: { fontSize: rem(20) },
+      h5: { fontSize: rem(16) },
+      h6: { fontSize: rem(14) },
     },
   },
   colors: MantineColors,
@@ -33,7 +34,13 @@ export const theme: MantineThemeOverride = {
     Input: {
       variants: {},
     },
-    Text: {},
+    Title: {
+      styles: (theme) => ({
+        root: {
+          color: theme.colors.gray[9],
+        },
+      }),
+    },
   },
   radius: {
     xs: rem(6),
@@ -42,6 +49,13 @@ export const theme: MantineThemeOverride = {
   },
   spacing: {},
   shadows: {},
+  other: {
+    fontWeight: {
+      light: 300,
+      normal: 400,
+      bold: 900,
+    },
+  },
   breakpoints: {
     xs: rem(480),
     sm: rem(768),
