@@ -50,3 +50,31 @@ export const NotDelivered: Story = {
     variant: 'notDelivered',
   },
 }
+
+export const ChangeToDeliver: Story = {
+  args: {
+    children: '運搬中へ',
+    variant: 'changetoDeliver',
+  },
+}
+
+export const ChangeToPackage: Story = {
+  args: {
+    children: '納品完了へ',
+    variant: 'changetoPackage',
+  },
+}
+
+export const ChangeToCancel: Story = {
+  args: {
+    children: 'キャンセルへ',
+    variant: 'changetoCancel',
+  },
+}
+
+export const ChangeToNotDelivered: Story = {
+  args: {
+    children: '不具合発生へ',
+    variant: 'changetoNotDeliver',
+  },
+}

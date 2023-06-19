@@ -1,7 +1,8 @@
 import React from 'react'
 import './App.scss'
-import { Button, MantineProvider, Text } from '@mantine/core'
+import { MantineProvider, Text } from '@mantine/core'
 import { theme } from '../styles/Mantine/mantine.theme'
+import Button from '../common/components/atoms/Button/Button'
 import CustomFonts from '../styles/Mantine/CustomFonts/CustomFonts'
 import Input from '../common/components/atoms/Input/Input'
 
@@ -21,7 +22,11 @@ const App = () => {
             onChange={(e) => console.log(e.target.value)}
             label="メールアドレス"
           />
-          <Button variant="primary">Test</Button>
+          <Button variant="changetoDeliver">Test</Button>
+          <Button variant="changetoPackage">Test</Button>
+          <Button variant="changetoCancel">Test</Button>
+          <Button variant="changetoNotDeliver">Test</Button>
+
           <p>
             Edit <code>src/App.tsx</code> and save to reload.
           </p>
