@@ -28,9 +28,6 @@ export const theme: MantineThemeOverride = {
     xxl: rem(64),
   },
   components: {
-    Button: {
-      variants: buttonVariants,
-    },
     Input: {
       variants: {},
     },
@@ -48,7 +45,9 @@ export const theme: MantineThemeOverride = {
     lg: rem(12),
   },
   spacing: {},
-  shadows: {},
+  shadows: {
+    sm: '0px 2px 2px rgba(0, 0, 0, 0.25)',
+  },
   other: {
     fontWeight: {
       light: 300,
