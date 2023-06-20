@@ -6,15 +6,19 @@ import {
   createRoutesFromElements,
 } from 'react-router-dom'
 import App from '../App/App'
-import Button from '../common/components/atoms/Button/Button'
+import AdminLogin from '../pages/AdminLogin/AdminLogin'
+import AgencyLogin from '../pages/AgencyLogin/AgencyLogin'
+import VendorLogin from '../pages/VendorLogin/VendorLogin'
 
 const router = createBrowserRouter(
   createRoutesFromElements(
     <>
       <Route path="/" element={<App />}>
-        <Route path="/login" element={<Button>Test</Button>}></Route>
+        <Route path="/login" element={<AdminLogin />}></Route>
+        <Route path="/agency-login" element={<AgencyLogin />}></Route>
+        <Route path="/vendor-login" element={<VendorLogin />}></Route>
       </Route>
-      <Route path="*" element={<Navigate to="/" />} />
+      <Route path="*" element={<Navigate to="/login" />} />
     </>
   )
 )

@@ -10,12 +10,16 @@ interface customButtonProps {
   variant?: string
   children: string
   fullWidth?: boolean
+  onClick: () => void
+  className?: string | null
 }
 
 const Button = ({
   children,
   variant = 'primary',
   fullWidth = false,
+  onClick,
+  className = null
 }: customButtonProps) => {
   const svg = (variant: string) => {
     switch (variant) {
@@ -33,9 +37,10 @@ const Button = ({
   }
   return (
     <MantineButton
-      className={variant}
+      className={`${variant} ${className}`}
       leftIcon={svg(variant)}
       fullWidth={fullWidth}
+      onClick={onClick}
     >
       {children}
     </MantineButton>
