@@ -5,12 +5,7 @@ import './LoginForm.scss'
 import Text from '../../atoms/Text/Text'
 import { Anchor } from '@mantine/core'
 
-interface LoginFormProps {
-  username: string
-  password: string
-  onChange: (field: string, value: string) => void
-  onSubmit: () => void
-}
+
 
 const LoginForm = ({
   username,
@@ -35,7 +30,7 @@ const LoginForm = ({
         type="email"
       />
       <Anchor href={''}>
-        <Text ta={'right'} color="blue.5" td={'underline'} fw={700}>
+        <Text ta={'right'} color="blue.5" td={'underline'} fw={700} fz={'xxs'}>
           Hello
         </Text>
       </Anchor>
