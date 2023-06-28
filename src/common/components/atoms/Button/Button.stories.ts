@@ -1,6 +1,6 @@
 import type { Meta, StoryObj } from '@storybook/react'
 
-import { Button } from '@mantine/core'
+import Button from './Button'
 
 const meta: Meta<typeof Button> = {
   title: 'Atoms/Button',
@@ -8,10 +8,6 @@ const meta: Meta<typeof Button> = {
   argTypes: {
     variant: {
       options: ['primary', 'secondary', 'delivered', 'shipped', 'notDelivered'],
-      control: { type: 'select' },
-    },
-    radius: {
-      options: ['xs', 'sm', 'md', 'lg', 'xl'],
       control: { type: 'select' },
     },
   },
@@ -52,5 +48,33 @@ export const NotDelivered: Story = {
   args: {
     children: 'Not Delivered',
     variant: 'notDelivered',
+  },
+}
+
+export const ChangeToDeliver: Story = {
+  args: {
+    children: '運搬中へ',
+    variant: 'changetoDeliver',
+  },
+}
+
+export const ChangeToPackage: Story = {
+  args: {
+    children: '納品完了へ',
+    variant: 'changetoPackage',
+  },
+}
+
+export const ChangeToCancel: Story = {
+  args: {
+    children: 'キャンセルへ',
+    variant: 'changetoCancel',
+  },
+}
+
+export const ChangeToNotDelivered: Story = {
+  args: {
+    children: '不具合発生へ',
+    variant: 'changetoNotDeliver',
   },
 }

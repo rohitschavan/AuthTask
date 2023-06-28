@@ -2,12 +2,28 @@ import React from 'react'
 import { TextInput } from '@mantine/core'
 import './Input.scss'
 
-const Input = ({ placeholder, onChange, label }: InputTypes) => {
+interface InputTypes {
+  placeholder: string
+  onChange: (value: string) => void
+  label: string
+  value: string
+  type?: string
+}
+
+const Input = ({
+  placeholder,
+  onChange,
+  label,
+  value,
+  type = 'text',
+}: InputTypes) => {
   return (
     <TextInput
       placeholder={placeholder}
-      onChange={onChange}
+      onChange={(e) => onChange(e.target.value)}
       label={label}
+      value={value}
+      type={type}
     />
   )
 }

@@ -1,13 +1,25 @@
 import React from 'react'
 import ReactDOM from 'react-dom/client'
 import './index.scss'
-import App from './App/App'
 import reportWebVitals from './reportWebVitals'
+import { RouterProvider } from 'react-router-dom'
+import router from './routes'
+import { MantineProvider } from '@mantine/core'
+import { theme } from './styles/Mantine/mantine.theme'
+import CustomFonts from './styles/Mantine/CustomFonts/CustomFonts'
 
 const root = ReactDOM.createRoot(document.getElementById('root') as HTMLElement)
 root.render(
   <React.StrictMode>
-    <App />
+    <MantineProvider
+      withCSSVariables
+      withGlobalStyles
+      withNormalizeCSS
+      theme={theme}
+    >
+      <CustomFonts />
+      <RouterProvider router={router} />
+    </MantineProvider>
   </React.StrictMode>
 )
 
