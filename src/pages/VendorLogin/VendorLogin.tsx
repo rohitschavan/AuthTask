@@ -1,28 +1,25 @@
-import React, { useState } from 'react'
+import React from 'react'
 import LoginSection from '../../common/components/organisms/LoginSection/LoginSection'
 import FormLayout from '../../common/components/templates/FormLayout/FormLayout'
+import useAuthStore from '../../services/auth/authStore'
 
 const VendorLogin = () => {
-  const [username, setUsername] = useState('')
-  const [password, setPassword] = useState('')
-  const handleInputChange = (field: string, value: string) => {
-    if (field === 'username') {
-      setUsername(value)
-    } else if (field === 'password') {
-      setPassword(value)
-    }
+  const userdata = useAuthStore((state) => state.userLogin)
+  const setUserLogin = useAuthStore((state) => state.setUserLogin)
+
+  const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+    setUserLogin({ ...userdata, [e.target.name]: e.target.value })
   }
   const handleLogin = () => {
     //api calls or login logic
-    console.log(username, password)
+    console.log(userdata)
   }
   return (
     <FormLayout>
       <LoginSection
         title="Vendor Login"
-        username={username}
-        password={password}
-        onChange={handleInputChange}
+        data={userdata}
+        onChange={handleChange}
         onLogin={handleLogin}
       />
     </FormLayout>

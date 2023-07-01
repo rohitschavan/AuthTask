@@ -7,37 +7,33 @@ import './ChangePasswordForm.scss'
 
 
 const ChangePasswordForm = ({
-  oldPassword,
-  newPassword,
   onChange,
+  data,
   onSubmit,
 }: ChangePasswordFormProps) => {
   return (
     <form className="change-password-form">
       <Input
         placeholder={'placeholder'}
-        onChange={(value) => onChange('oldPassword', value)}
+        onChange={onChange}
         label={'Old Password'}
-        value={oldPassword}
+        value={data.oldPassword}
         type={'password'}
+        name='oldPassword'
       />
       <Input
         placeholder={'placeholder'}
-        onChange={(value) => onChange('newPassword', value)}
+        onChange={onChange}
         label={'New Password'}
-        value={newPassword}
+        value={data.newPassword}
         type="password"
+        name={"newPassword"}
       />
       <div className="button-wrapper">
         <Button onClick={onSubmit} fullWidth>
           Submit
         </Button>
       </div>
-      {/* Please verify it  */}
-      {/* or */}
-      {/* <Button onClick={onSubmit} fullWidth className="button-wrapper">
-        Submit
-      </Button> */}
     </form>
   )
 }

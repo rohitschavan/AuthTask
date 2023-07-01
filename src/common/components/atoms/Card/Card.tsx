@@ -1,13 +1,9 @@
 import React from 'react'
-import { Card as MantineCard } from '@mantine/core'
+import { Card as MantineCard, CardProps } from '@mantine/core'
 import './Card.scss'
 
-interface cardProps {
-  children?: React.ReactNode
-}
-
-const Card = ({ children }: cardProps) => {
-  return <MantineCard>{children}</MantineCard>
+const Card: React.FC<CardProps> = ({ ...props }) => {
+  return <MantineCard>{props.children}</MantineCard>
 }
 
 export default Card

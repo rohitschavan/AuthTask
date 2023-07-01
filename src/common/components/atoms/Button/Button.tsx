@@ -1,26 +1,20 @@
-import React from 'react'
-import { Button as MantineButton } from '@mantine/core'
+import React, { ButtonHTMLAttributes } from 'react'
+import { Button as MantineButton, ButtonProps } from '@mantine/core'
 import './Button.scss'
 import { ReactComponent as DeliverIcon } from '../../../assets/icons/delivered.svg'
 import { ReactComponent as CancelIcon } from '../../../assets/icons/cancelled.svg'
 import { ReactComponent as NotDeliveredIcon } from '../../../assets/icons/notDelivered.svg'
 import { ReactComponent as ShippedIcon } from '../../../assets/icons/shipped.svg'
 
-interface customButtonProps {
-  variant?: string
-  children: string
-  fullWidth?: boolean
-  onClick: () => void
-  className?: string | null
-}
+type ExtendedButtonProps = ButtonProps &
+  ButtonHTMLAttributes<HTMLButtonElement> & {
+    variant?: string
+  }
 
-const Button = ({
-  children,
-  variant = 'primary',
-  fullWidth = false,
-  onClick,
-  className = null
-}: customButtonProps) => {
+const Button = ({ variant = 'primary', ...props }: ExtendedButtonProps) => {
+  if (props.style || props.styles || props.className || props.classNames) {
+    throw new Error('Custom styles are not allowed')
+  }
   const svg = (variant: string) => {
     switch (variant) {
       case 'changetoDeliver':
@@ -36,13 +30,8 @@ const Button = ({
     }
   }
   return (
-    <MantineButton
-      className={`${variant} ${className}`}
-      leftIcon={svg(variant)}
-      fullWidth={fullWidth}
-      onClick={onClick}
-    >
-      {children}
+    <MantineButton className={`${variant}`} leftIcon={svg(variant)} {...props}>
+      {props.children}
     </MantineButton>
   )
 }

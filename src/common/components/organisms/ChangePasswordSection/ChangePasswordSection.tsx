@@ -2,11 +2,9 @@ import React from 'react'
 import { Title } from '@mantine/core'
 import ChangePasswordForm from '../../molecules/ChangePasswordForm/ChangePasswordForm'
 
-
 const ChangePasswordSection = ({
   title,
-  oldPassword,
-  newPassword,
+  data,
   onChange,
   onSubmit,
 }: ChangePasswordSectionProps) => {
@@ -16,8 +14,7 @@ const ChangePasswordSection = ({
         {title}
       </Title>
       <ChangePasswordForm
-        oldPassword={oldPassword}
-        newPassword={newPassword}
+        data={data}
         onChange={onChange}
         onSubmit={onSubmit}
       />

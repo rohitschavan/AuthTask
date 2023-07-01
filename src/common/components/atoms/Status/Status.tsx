@@ -10,13 +10,13 @@ import './Status.scss'
 
 interface StatusProps {
   variant?:
-    | string
     | 'awaitingPayment'
     | 'preparingtoShip'
     | 'inTransit'
     | 'delivered'
     | 'cancelled'
     | 'notDelivered'
+    | 'default'
   children: React.ReactNode
 }
 

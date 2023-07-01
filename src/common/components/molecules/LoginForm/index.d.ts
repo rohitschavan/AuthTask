@@ -1,6 +1,10 @@
-interface LoginFormProps {
+interface UserLogin {
   username: string
   password: string
-  onChange: (field: string, value: string) => void
+}
+
+interface LoginFormProps {
+  data: UserLogin
+  onChange: React.ChangeEventHandler<HTMLInputElement>
   onSubmit: () => void
 }

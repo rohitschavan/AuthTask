@@ -5,29 +5,24 @@ import './LoginForm.scss'
 import Text from '../../atoms/Text/Text'
 import { Anchor } from '@mantine/core'
 
-
-
-const LoginForm = ({
-  username,
-  password,
-  onChange,
-  onSubmit,
-}: LoginFormProps) => {
+const LoginForm = ({ onChange, data, onSubmit }: LoginFormProps) => {
   return (
     <form className="login-form">
       <Input
         placeholder={'placeholder'}
-        onChange={(value) => onChange('username', value)}
+        onChange={onChange}
+        name="username"
         label={'Username'}
-        value={username}
+        value={data.username}
         type={'text'}
       />
       <Input
         placeholder={'placeholder'}
-        onChange={(value) => onChange('password', value)}
+        onChange={onChange}
         label={'Password'}
-        value={password}
-        type="email"
+        value={data.password}
+        type="password"
+        name="password"
       />
       <Anchor href={''}>
         <Text ta={'right'} color="blue.5" td={'underline'} fw={700} fz={'xxs'}>
@@ -39,11 +34,6 @@ const LoginForm = ({
           Submit
         </Button>
       </div>
-      {/* Please verify it  */}
-      {/* or */}
-      {/* <Button onClick={onSubmit} fullWidth className="button-wrapper">
-        Submit
-      </Button> */}
     </form>
   )
 }

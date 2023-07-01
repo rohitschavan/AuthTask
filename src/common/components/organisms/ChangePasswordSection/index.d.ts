@@ -1,7 +1,10 @@
-interface ChangePasswordSectionProps {
-  title: string
+interface changePasswordProps {
   newPassword: string
   oldPassword: string
-  onChange: (field: string, value: string) => void
+}
+interface ChangePasswordSectionProps {
+  title: string
+  data: changePasswordProps
+  onChange: React.ChangeEventHandler<HTMLInputElement>
   onSubmit: () => void
 }

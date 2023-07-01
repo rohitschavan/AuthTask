@@ -3,30 +3,29 @@ import LoginForm from '../../molecules/LoginForm/LoginForm'
 import { Title } from '@mantine/core'
 import './LoginSection.scss'
 
-interface LoginSectionProps {
-  title: string
+interface UserLogin {
   username: string
   password: string
-  onChange: (field: string, value: string) => void
+}
+interface LoginSectionProps {
+  title: string
+  data: UserLogin
+  onChange: React.ChangeEventHandler<HTMLInputElement>
   onLogin: () => void
 }
 
 const LoginSection = ({
   title,
-  username,
-  password,
+  data,
   onChange,
   onLogin,
 }: LoginSectionProps) => {
   return (
-    <section className='login-section'>
-      <Title order={3} ta={'center'}>{title}</Title>
-      <LoginForm
-        username={username}
-        password={password}
-        onChange={onChange}
-        onSubmit={onLogin}
-      />
+    <section className="login-section">
+      <Title order={3} ta={'center'}>
+        {title}
+      </Title>
+      <LoginForm data={data} onChange={onChange} onSubmit={onLogin} />
     </section>
   )
 }

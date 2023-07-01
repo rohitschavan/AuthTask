@@ -1,20 +1,20 @@
 import React from 'react'
 import Input from '../../atoms/Input/Input'
 import Button from '../../atoms/Button/Button'
-import { Title,Anchor,Text } from '@mantine/core'
+import { Title, Anchor, Text } from '@mantine/core'
 
 import './ForgetPasswordSection.scss'
 
 interface ForgetFormProps {
-  username: string
-  onChange: (field: string, value: string) => void
+  data: string
+  onChange: React.ChangeEventHandler<HTMLInputElement>
   onSubmit: () => void
 }
 
 const ForgetPasswordSection = ({
-  username,
   onChange,
   onSubmit,
+  data,
 }: ForgetFormProps) => {
   return (
     <form className="forget-password">
@@ -23,10 +23,11 @@ const ForgetPasswordSection = ({
       </Title>
       <Input
         placeholder={'placeholder'}
-        onChange={(value) => onChange('username', value)}
-        label={'Username'}
-        value={username}
+        onChange={onChange}
+        label={'Forget Password'}
+        value={data}
         type={'text'}
+        name="forgetPassword"
       />
       <div className="button-wrapper">
         <Button onClick={onSubmit} fullWidth>
