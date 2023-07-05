@@ -1,10 +1,10 @@
 interface UserLogin {
-  username: string
+  email: string
   password: string
 }
 
 interface LoginFormProps {
   data: UserLogin
   onChange: React.ChangeEventHandler<HTMLInputElement>
-  onSubmit: () => void
+  onSubmit: (data: UserLogin) => void
 }

@@ -4,25 +4,38 @@ import Button from '../../atoms/Button/Button'
 import './LoginForm.scss'
 import Text from '../../atoms/Text/Text'
 import { Anchor } from '@mantine/core'
+import { useForm } from '@mantine/form'
 
-const LoginForm = ({ onChange, data, onSubmit }: LoginFormProps) => {
+const LoginForm = ({ onSubmit }: LoginFormProps) => {
+  const form = useForm({
+    initialValues: {
+      password: '',
+      email: '',
+    },
+
+    validate: {
+      // email: (value) => (/^\S+@\S+$/.test(value) ? null : 'Invalid email'),
+    },
+  })
+
   return (
-    <form className="login-form">
+    <form
+      className="login-form"
+      onSubmit={form.onSubmit(() => {
+        onSubmit(form.values)
+      })}
+    >
       <Input
         placeholder={'placeholder'}
-        onChange={onChange}
-        name="username"
         label={'Username'}
-        value={data.username}
         type={'text'}
+        {...form.getInputProps('email')}
       />
       <Input
         placeholder={'placeholder'}
-        onChange={onChange}
         label={'Password'}
-        value={data.password}
-        type="password"
-        name="password"
+        type={'password'}
+        {...form.getInputProps('password')}
       />
       <Anchor href={''}>
         <Text ta={'right'} color="blue.5" td={'underline'} fw={700} fz={'xxs'}>
@@ -30,7 +43,7 @@ const LoginForm = ({ onChange, data, onSubmit }: LoginFormProps) => {
         </Text>
       </Anchor>
       <div className="button-wrapper">
-        <Button onClick={onSubmit} fullWidth>
+        <Button fullWidth type="submit">
           Submit
         </Button>
       </div>

@@ -4,14 +4,14 @@ import { Title } from '@mantine/core'
 import './LoginSection.scss'
 
 interface UserLogin {
-  username: string
+  email: string
   password: string
 }
 interface LoginSectionProps {
   title: string
   data: UserLogin
   onChange: React.ChangeEventHandler<HTMLInputElement>
-  onLogin: () => void
+  onLogin: (data: UserLogin) => void
 }
 
 const LoginSection = ({

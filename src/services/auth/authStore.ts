@@ -1,7 +1,7 @@
 import { create } from 'zustand'
 
 interface UserLogin {
-  username: string
+  email: string
   password: string
 }
 
@@ -19,6 +19,7 @@ interface AuthState {
   changePassword: changePasswordProps
   setchangePassword: (data: changePasswordProps) => void
   forgetPassword: string
+  setIsAuthenticated: (data: boolean) => void
   setforgetPassword: (data: string) => void
   login: (accessToken: string, refreshToken: string) => void
   logout: () => void
@@ -30,7 +31,7 @@ const useAuthStore = create<AuthState>((set) => ({
   isAuthenticated: false,
   forgetPassword: '',
   userLogin: {
-    username: '',
+    email: '',
     password: '',
   },
   changePassword: {
@@ -41,6 +42,11 @@ const useAuthStore = create<AuthState>((set) => ({
   setUserLogin: (data) => {
     set(() => ({
       userLogin: { ...data },
+    }))
+  },
+  setIsAuthenticated: (data) => {
+    set(() => ({
+      isAuthenticated: data,
     }))
   },
 
