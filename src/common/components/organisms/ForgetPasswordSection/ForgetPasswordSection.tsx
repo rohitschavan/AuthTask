@@ -19,10 +19,10 @@ const ForgetPasswordSection = ({
   return (
     <form className="forget-password">
       <Title order={3} ta={'center'}>
-        Title
+        Froget Password
       </Title>
       <Input
-        placeholder={'placeholder'}
+        placeholder={'email'}
         onChange={onChange}
         label={'Forget Password'}
         value={data}
@@ -34,9 +34,9 @@ const ForgetPasswordSection = ({
           Submit
         </Button>
       </div>
-      <Anchor href={''}>
+      <Anchor href={'/login'}>
         <Text ta={'right'} color="blue.5" td={'underline'} fw={700} fz={'xxs'}>
-          Hello
+          Back to Login
         </Text>
       </Anchor>
     </form>

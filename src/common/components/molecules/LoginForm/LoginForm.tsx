@@ -11,7 +11,7 @@ const LoginForm = ({ onSubmit }: LoginFormProps) => {
     initialValues: {
       password: '',
       email: '',
-    },
+  },
 
     validate: {
       // email: (value) => (/^\S+@\S+$/.test(value) ? null : 'Invalid email'),
@@ -37,9 +37,9 @@ const LoginForm = ({ onSubmit }: LoginFormProps) => {
         type={'password'}
         {...form.getInputProps('password')}
       />
-      <Anchor href={''}>
+      <Anchor href={'/forget-password'}>
         <Text ta={'right'} color="blue.5" td={'underline'} fw={700} fz={'xxs'}>
-          Hello
+          Forget Password
         </Text>
       </Anchor>
       <div className="button-wrapper">

@@ -1,30 +1,31 @@
 import React from 'react'
-import {
-  Route,
-  Navigate,
-  createBrowserRouter,
-  createRoutesFromElements,
-} from 'react-router-dom'
-import App from '../App/App'
-import AdminLogin from '../pages/AdminLogin/AdminLogin'
-import AgencyLogin from '../pages/AgencyLogin/AgencyLogin'
-import VendorLogin from '../pages/VendorLogin/VendorLogin'
+import { Routes, Route } from 'react-router-dom'
 import ForgetPassword from '../pages/ForgetPassword/ForgetPassword'
 import ChangePassword from '../pages/ChangePassword/ChangePassword'
+import ProtectedRoutes from './ProtectedRoutes'
+import Appshell from '../common/components/templates/AppShell/AppShell'
+import Login from '../pages/Login/Login'
 
-const router = createBrowserRouter(
-  createRoutesFromElements(
-    <>
-      <Route path="/" element={<App />}>
-        <Route path="/login" element={<AdminLogin />}></Route>
-        <Route path="/forget-password" element={<ForgetPassword />}></Route>
-        <Route path="/change-password" element={<ChangePassword />}></Route>
-        <Route path="/agency-login" element={<AgencyLogin />}></Route>
-        <Route path="/vendor-login" element={<VendorLogin />}></Route>
-      </Route>
-      <Route path="*" element={<Navigate to="/login" />} />
-    </>
+type RouterProps = {
+  domain: string
+}
+
+export const Router = ({ domain }: RouterProps) => {
+  return (
+    <Routes>
+      <Route path="/" element={<Login userType={domain} />} />
+      <Route path="/login" element={<Login userType={domain} />} />
+      <Route path="/forget-password" element={<ForgetPassword />} />
+      <Route path="/change-password" element={<ChangePassword />} />
+      <Route
+        path="/dashboard"
+        element={
+          <ProtectedRoutes>
+            <Appshell />
+          </ProtectedRoutes>
+        }
+      />
+      <Route path="*" element={<h1>Page not found</h1>} />
+    </Routes>
   )
-)
-
-export default router
+}

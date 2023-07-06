@@ -23,6 +23,8 @@ interface AuthState {
   setforgetPassword: (data: string) => void
   login: (accessToken: string, refreshToken: string) => void
   logout: () => void
+  text: string | null
+  setText: (data: string) => void
 }
 
 const useAuthStore = create<AuthState>((set) => ({
@@ -30,6 +32,7 @@ const useAuthStore = create<AuthState>((set) => ({
   refreshToken: null,
   isAuthenticated: false,
   forgetPassword: '',
+  text: null,
   userLogin: {
     email: '',
     password: '',
@@ -39,6 +42,12 @@ const useAuthStore = create<AuthState>((set) => ({
     oldPassword: '',
   },
 
+  setText: (data) => {
+    set(() => ({
+      text: data,
+    }))
+  },
+  
   setUserLogin: (data) => {
     set(() => ({
       userLogin: { ...data },

@@ -5,3 +5,7 @@ export const setCookies = (key: string, data: string) => {
     expires: 1,
   })
 }
+
+export const getCookies = (key: string) => {
+  return Cookies.get(key)
+}

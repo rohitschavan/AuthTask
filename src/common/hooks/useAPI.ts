@@ -1,5 +1,5 @@
-import { useState, useEffect } from 'react'
-import { AxiosRequestConfig, AxiosError } from 'axios'
+import { useState } from 'react'
+import { AxiosRequestConfig } from 'axios'
 import instance from '../../utils/axios'
 
 interface ApiCall<T> {

@@ -14,15 +14,15 @@ const ChangePasswordForm = ({
   return (
     <form className="change-password-form">
       <Input
-        placeholder={'placeholder'}
+        placeholder={'Enter current password'}
         onChange={onChange}
-        label={'Old Password'}
+        label={'Current Password'}
         value={data.oldPassword}
         type={'password'}
         name='oldPassword'
       />
       <Input
-        placeholder={'placeholder'}
+        placeholder={'Enter new password'}
         onChange={onChange}
         label={'New Password'}
         value={data.newPassword}
@@ -31,7 +31,7 @@ const ChangePasswordForm = ({
       />
       <div className="button-wrapper">
         <Button onClick={onSubmit} fullWidth>
-          Submit
+          Reset 
         </Button>
       </div>
     </form>

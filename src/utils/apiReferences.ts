@@ -7,14 +7,14 @@ export const getData = async () => {
   return response.data
 }
 
-export const userLogin = async (payload: any) => {
-  const response = await instance.put('/admin/auth/login', payload)
+export const userLogin = async (payload: any, userType: string) => {
+  const response = await instance.put(`/${userType}/auth/login`, payload)
   console.log(response.data)
   return response.data
 }
 
 export const userLogout = async () => {
-  const response = await axios.put('/admin/auth/logout')
+  const response = await axios.post('/admin/auth/logout')
   console.log(response.data)
   return response.data
 }

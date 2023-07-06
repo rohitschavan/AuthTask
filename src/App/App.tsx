@@ -1,14 +1,25 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import './App.scss'
-import { Outlet } from 'react-router-dom'
-import Appshell from '../common/components/templates/AppShell/AppShell'
+import { useNavigate } from 'react-router-dom'
+import useAuthStore from '../services/auth/authStore'
+import { getCookies } from '../utils/cookies'
+import { getApp } from '../utils/helper'
 
 const App = () => {
+  const setIsAuthenticated = useAuthStore((state) => state.setIsAuthenticated)
+  const navigate = useNavigate()
+  const { app: App, domain: subdomain } = getApp()
+
+  useEffect(() => {
+    if (getCookies('accessToken')) {
+      setIsAuthenticated(true)
+      navigate('/dashboard')
+    }
+  }, [])
+
   return (
     <div className="App">
-      <Appshell>
-        <Outlet />
-      </Appshell>
+      <App domain={subdomain} />
     </div>
   )
 }
