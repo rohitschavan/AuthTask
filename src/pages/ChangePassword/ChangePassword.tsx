@@ -1,12 +1,11 @@
 import React from 'react'
 import FormLayout from '../../common/components/templates/FormLayout/FormLayout'
 import ChangePasswordSection from '../../common/components/organisms/ChangePasswordSection/ChangePasswordSection'
-import useAuthStore from '../../services/auth/authStore'
+import useAuthStore from '../../services/common/auth/authStore'
 
 const ChangePassword = () => {
   const changePassword = useAuthStore((state) => state.changePassword)
   const setchangePassword = useAuthStore((state) => state.setchangePassword)
-
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     setchangePassword({ ...changePassword, [e.target.name]: e.target.value })

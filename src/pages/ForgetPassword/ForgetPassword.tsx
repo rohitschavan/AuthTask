@@ -1,7 +1,7 @@
 import React from 'react'
 import FormLayout from '../../common/components/templates/FormLayout/FormLayout'
 import ForgetPasswordSection from '../../common/components/organisms/ForgetPasswordSection/ForgetPasswordSection'
-import useAuthStore from '../../services/auth/authStore'
+import useAuthStore from '../../services/common/auth/authStore'
 
 const ForgetPassword = () => {
   const username = useAuthStore((state) => state.forgetPassword)

@@ -1,7 +1,7 @@
 import React, { useEffect } from 'react'
 import './App.scss'
 import { useNavigate } from 'react-router-dom'
-import useAuthStore from '../services/auth/authStore'
+import useAuthStore from '../services/common/auth/authStore'
 import { getCookies } from '../utils/cookies'
 import { getApp } from '../utils/helper'
 

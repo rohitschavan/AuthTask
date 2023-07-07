@@ -9,7 +9,6 @@ export const getData = async () => {
 
 export const userLogin = async (payload: any, userType: string) => {
   const response = await instance.put(`/${userType}/auth/login`, payload)
-  console.log(response.data)
   return response.data
 }
 

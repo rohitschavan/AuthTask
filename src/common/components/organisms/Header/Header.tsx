@@ -11,7 +11,7 @@ import { ReactComponent as DeliverIcon } from '../../../assets/icons/delivered.s
 import './Header.scss'
 import Cookies from 'js-cookie'
 import { useNavigate } from 'react-router-dom'
-import useAuthStore from '../../../../services/auth/authStore'
+import useAuthStore from '../../../../services/common/auth/authStore'
 
 const breadCrumbData = [
   { title: 'ダッシュボード', href: '#' },
