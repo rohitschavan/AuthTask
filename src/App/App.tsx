@@ -11,6 +11,10 @@ const App = () => {
   const { app: App, domain: subdomain } = getApp()
 
   useEffect(() => {
+    const subdomains = ['admin', 'agency', 'vendor']
+    if (!subdomains.includes(subdomain)) {
+      navigate('/page-not-found')
+    }
     if (getCookies('accessToken')) {
       setIsAuthenticated(true)
       navigate('/dashboard')
