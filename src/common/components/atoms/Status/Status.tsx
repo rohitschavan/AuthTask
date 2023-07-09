@@ -41,7 +41,7 @@ const Status = ({ variant = 'default', children }: StatusProps) => {
   }
 
   return (
-    <Badge leftSection={svg(variant)} variant="filled" className={variant}>
+    <Badge leftSection={svg(variant)} variant="filled" className={variant} fullWidth>
       {children}
     </Badge>
   )

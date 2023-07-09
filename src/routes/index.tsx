@@ -5,6 +5,7 @@ import ChangePassword from '../pages/ChangePassword/ChangePassword'
 import ProtectedRoutes from './ProtectedRoutes'
 import Appshell from '../common/components/templates/AppShell/AppShell'
 import Login from '../pages/Login/Login'
+import DashboardTable from 'common/components/molecules/DashboardTable/DashboardTable'
 
 type RouterProps = {
   domain: string
@@ -21,7 +22,9 @@ export const Router = ({ domain }: RouterProps) => {
         path="/dashboard"
         element={
           <ProtectedRoutes>
-            <Appshell />
+            <Appshell>
+              <DashboardTable />
+            </Appshell>
           </ProtectedRoutes>
         }
       />
