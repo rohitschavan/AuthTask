@@ -1,5 +1,5 @@
 import React from 'react'
-import Card from '../../atoms/Card/Card'
+import Card from 'common/components/atoms/Card'
 import './FormLayout.scss'
 
 

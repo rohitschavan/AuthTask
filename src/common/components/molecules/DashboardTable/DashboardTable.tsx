@@ -1,6 +1,6 @@
 import React from 'react'
 import { createColumnHelper } from '@tanstack/react-table'
-import Table from '../../atoms/Table/Table'
+import Table from 'common/components/atoms/Table'
 
 
 

@@ -1,8 +1,8 @@
 import React from 'react'
-import Input from 'common/components/atoms/Input/Input'
+import Input from 'common/components/atoms/Input'
 import Button from 'common/components/atoms/Button'
 import './LoginForm.scss'
-import Text from 'common/components/atoms/Text/Text'
+import Text from 'common/components/atoms/Text'
 import { Anchor } from '@mantine/core'
 import { useForm } from '@mantine/form'
 
@@ -11,7 +11,7 @@ const LoginForm = ({ onSubmit }: LoginFormProps) => {
     initialValues: {
       password: '',
       email: '',
-  },
+    },
 
     validate: {
       // email: (value) => (/^\S+@\S+$/.test(value) ? null : 'Invalid email'),

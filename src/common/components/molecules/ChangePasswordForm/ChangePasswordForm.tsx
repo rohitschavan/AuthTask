@@ -1,6 +1,6 @@
 import React from 'react'
-import Input from '../../atoms/Input/Input'
-import Button from '../../atoms/Button/Button'
+import Input from 'common/components/atoms/Input'
+import Button from 'common/components/atoms/Button'
 
 import './ChangePasswordForm.scss'
 

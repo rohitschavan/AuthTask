@@ -1,6 +1,6 @@
 import React from 'react'
 import { Title } from '@mantine/core'
-import ChangePasswordForm from '../../molecules/ChangePasswordForm/ChangePasswordForm'
+import ChangePasswordForm from 'common/components/molecules/ChangePasswordForm'
 
 const ChangePasswordSection = ({
   title,

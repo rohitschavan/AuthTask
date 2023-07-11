@@ -1,5 +1,5 @@
 import React from 'react'
-import LoginForm from '../../molecules/LoginForm/LoginForm'
+import LoginForm from 'common/components/molecules/LoginForm'
 import { Title } from '@mantine/core'
 import './LoginSection.scss'
 
