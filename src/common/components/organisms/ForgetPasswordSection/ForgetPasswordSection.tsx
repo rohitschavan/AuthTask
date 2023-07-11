@@ -5,12 +5,6 @@ import { Title, Anchor, Text } from '@mantine/core'
 
 import './ForgetPasswordSection.scss'
 
-interface ForgetFormProps {
-  data: string
-  onChange: React.ChangeEventHandler<HTMLInputElement>
-  onSubmit: () => void
-}
-
 const ForgetPasswordSection = ({
   onChange,
   onSubmit,

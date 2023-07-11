@@ -4,8 +4,6 @@ import Button from '../../atoms/Button/Button'
 
 import './ChangePasswordForm.scss'
 
-
-
 const ChangePasswordForm = ({
   onChange,
   data,

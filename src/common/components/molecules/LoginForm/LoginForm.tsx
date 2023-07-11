@@ -1,8 +1,8 @@
 import React from 'react'
-import Input from '../../atoms/Input/Input'
-import Button from '../../atoms/Button/Button'
+import Input from 'common/components/atoms/Input/Input'
+import Button from 'common/components/atoms/Button'
 import './LoginForm.scss'
-import Text from '../../atoms/Text/Text'
+import Text from 'common/components/atoms/Text/Text'
 import { Anchor } from '@mantine/core'
 import { useForm } from '@mantine/form'
 

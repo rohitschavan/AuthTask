@@ -1,4 +1,4 @@
-import { DeepPartial } from '../../types/Gloabal'
+import { DeepPartial } from '../../types/Global'
 import { DefaultMantineColor } from '@mantine/core'
 
 const MantineColors: DeepPartial<

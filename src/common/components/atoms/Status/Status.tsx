@@ -8,18 +8,6 @@ import { ReactComponent as CancelledIcon } from '../../../assets/icons/cancelled
 import { ReactComponent as NotDeliveredIcon } from '../../../assets/icons/notDelivered.svg'
 import './Status.scss'
 
-interface StatusProps {
-  variant?:
-    | 'awaitingPayment'
-    | 'preparingtoShip'
-    | 'inTransit'
-    | 'delivered'
-    | 'cancelled'
-    | 'notDelivered'
-    | 'default'
-  children: React.ReactNode
-}
-
 const Status = ({ variant = 'default', children }: StatusProps) => {
   const svg = (variant: string) => {
     switch (variant) {

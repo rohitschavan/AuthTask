@@ -1,10 +1,7 @@
 import React from 'react'
-import { TextProps, Text as MantineText } from '@mantine/core'
+import { Text as MantineText } from '@mantine/core'
 import './Text.scss'
-
-interface customTextProps extends TextProps {
-  children: string
-}
+import { customTextProps } from './@types'
 
 const Text: React.FC<customTextProps> = ({
   children,
