@@ -7,6 +7,7 @@ import {
   useReactTable,
 } from '@tanstack/react-table'
 
+// eslint-disable-next-line @typescript-eslint/no-explicit-any
 const Table = ({ data, columns }: any) => {
   const table = useReactTable({
     data,

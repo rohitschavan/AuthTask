@@ -42,11 +42,13 @@ const columns = [
     cell: (info) => info.renderValue(),
   }),
   columnHelper.accessor('airlineHeadQuaters', {
-    header: () => <span>Payment</span>,
+    header: () => <span>Head Quaters</span>,
+    cell: (info) => info.renderValue(),
   }),
 
 ]
 const DashboardTable = () => {
+  // eslint-disable-next-line @typescript-eslint/no-unused-vars
   const [data, setData] = React.useState(() => [...defaultData])
 
   return <>{data && <Table data={data} columns={columns} />}</>
