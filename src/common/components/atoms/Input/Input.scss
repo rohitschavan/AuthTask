@@ -4,12 +4,25 @@
 }
 
 .mantine-TextInput-input {
+  font-family: 'Lato-SemiBold';
+  font-weight: 500;
   border-radius: var(--mantine-radius-xs);
   border: solid 1px var(--mantine-color-gray-9);
-  font-size: var(--mantine-font-size-sm);
-  color: var(--mantine-color-gray-4);
-  font-weight: 700;
+  font-size: 16px;
+  color: #000000;
+
   width: 100%;
+  outline: none;
+  &:focus {
+    border-color: var(--mantine-color-gray-9);
+  }
+}
+.mantine-TextInput-input::placeholder {
+  font-family: 'Lato-Regular';
+  font-weight: 500;
+  font-size: 16px;
+  width: 100%;
+  color: #000000;
   outline: none;
   &:focus {
     border-color: var(--mantine-color-gray-9);

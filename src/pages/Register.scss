@@ -1,0 +1,59 @@
+.form-box{
+    display: flex;
+    flex-direction: column;
+   gap: 18px;
+   width: 100%;
+  font-weight: bold;
+  height: 634px;
+  position: relative;
+  justify-content: center;
+
+
+}
+
+
+.heading{
+width: 91px;
+height: 29px;
+font-family: 'Lato-SemiBold';
+font-style: normal;
+font-weight: 700;
+font-size: 24px;
+line-height: 29px;
+letter-spacing: 0.016em;
+text-align: center;
+width: 100%;
+color: #000000;
+}
+
+
+.inputlabel{
+    /* Xodimlar */
+
+width: 328px;
+height: 12px;
+
+font-family: 'Lato-Regular';
+font-style: normal;
+font-weight: 700;
+font-size: 12px;
+line-height: 14px;
+letter-spacing: 0.5px;
+color: #000000;
+position: relative;
+top: 12px;
+}
+.submitbtn{
+
+font-family: 'Lato-SemiBold';
+font-style: normal;
+font-weight: 700;
+font-size: 12px;
+line-height: 14px;
+letter-spacing: 0.5px;
+color: #ffffff;
+position: relative;
+
+}
+
+

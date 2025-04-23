@@ -7,7 +7,9 @@ import './FormLayout.scss'
 const FormLayout = ({ children }: formLayout) => {
   return (
     <div className="form-layout">
-      <Card>{children}</Card>
+      <Card style={{
+        background:'#FFFFFF'
+      }}>{children}</Card>
     </div>
   )
 }

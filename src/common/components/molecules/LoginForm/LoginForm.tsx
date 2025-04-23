@@ -3,7 +3,7 @@ import Input from 'common/components/atoms/Input'
 import Button from 'common/components/atoms/Button'
 import './LoginForm.scss'
 import Text from 'common/components/atoms/Text'
-import { Anchor } from '@mantine/core'
+import { NavLink } from 'react-router-dom'
 import { useForm } from '@mantine/form'
 
 const LoginForm = ({ onSubmit }: LoginFormProps) => {
@@ -26,22 +26,22 @@ const LoginForm = ({ onSubmit }: LoginFormProps) => {
       })}
     >
       <Input
-        placeholder={'placeholder'}
+        placeholder={'Enter Email'}
         label={'Username'}
         type={'text'}
         {...form.getInputProps('email')}
       />
       <Input
-        placeholder={'placeholder'}
+        placeholder={'Enter Password'}
         label={'Password'}
         type={'password'}
         {...form.getInputProps('password')}
       />
-      <Anchor href={'/forget-password'}>
-        <Text ta={'right'} color="blue.5" td={'underline'} fw={700} fz={'xxs'}>
-          Forget Password
+      <NavLink  to={'/forgot-password'}>
+        <Text ta={'right'} color="black.5" td={'underline'} fw={700} fz={'xxs'}>
+          Forgot Password
         </Text>
-      </Anchor>
+      </NavLink>
       <div className="button-wrapper">
         <Button fullWidth type="submit">
           Submit
